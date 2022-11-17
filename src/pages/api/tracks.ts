@@ -5,5 +5,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import bump from './bbb.json'
 
 export default function tracks(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(bump);
+  res.status(200).json(bump.filter((record) => {
+    return record.artists[0].name === 'BUMP OF CHICKEN'
+  }));
 }
