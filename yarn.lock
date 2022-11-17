@@ -4946,7 +4946,7 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
 
-react-dom@^18.2.0:
+"react-dom@^16.5.0 || ^17.0.1 || ^18.1.0", react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   dependencies:
@@ -4965,7 +4965,7 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
 
-react@^18.2.0:
+"react@^16.5.0 || ^17.0.1 || ^18.1.0", react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   dependencies:
@@ -5491,6 +5491,18 @@ supports-hyperlinks@^2.0.0:
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
+
+survey-core@*:
+  version "1.9.58"
+  resolved "https://registry.yarnpkg.com/survey-core/-/survey-core-1.9.58.tgz#c0ecafaae06ab1a9bc6baa250f798cf5248c745c"
+
+survey-react-ui@^1.9.58:
+  version "1.9.58"
+  resolved "https://registry.yarnpkg.com/survey-react-ui/-/survey-react-ui-1.9.58.tgz#55324168fce52ecd9d95a4544ccced3873cfd52a"
+  dependencies:
+    react "^16.5.0 || ^17.0.1 || ^18.1.0"
+    react-dom "^16.5.0 || ^17.0.1 || ^18.1.0"
+    survey-core "*"
 
 svg-parser@^2.0.4:
   version "2.0.4"

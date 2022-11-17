@@ -1,0 +1,122 @@
+{
+  "locale": "ja",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "name": "name",
+          "title": "名前を入力してください",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "username",
+          "title": "ユーザ名を入力してください（SNSのIDなど）",
+          "isRequired": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "性別を入力してください",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "男性"
+            },
+            {
+              "value": "0",
+              "text": "女性"
+            },
+            {
+              "value": "2",
+              "text": "？"
+            }
+          ]
+        },
+        {
+          "type": "tagbox",
+          "name": "songs",
+          "title": "好きな曲を選んでください (10曲まで)",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "天体観測"
+            },
+            {
+              "value": "2",
+              "text": "Ray"
+            },
+            {
+              "value": "3",
+              "text": "新世界"
+            }
+          ],
+          "choicesOrder": "asc",
+          "showOtherItem": true,
+          "otherText": "その他",
+          "maxSelectedChoices": 10
+        },
+        {
+          "type": "comment",
+          "name": "trigger",
+          "title": "好きになったきっかけを入力してください",
+          "maxLength": 200,
+          "placeholder": "中学生の時に天体観測を聞いた。"
+        },
+        {
+          "type": "tagbox",
+          "name": "joining",
+          "title": "ライブの参加歴を選んでください。(10個まで)",
+          "choices": [
+            {
+              "value": "1",
+              "text": {
+                "default": "A",
+                "ja": "2022 Silver Jubilee"
+              }
+            },
+            {
+              "value": "2",
+              "text": {
+                "default": "B",
+                "ja": "2019 aurora ark"
+              }
+            },
+            {
+              "value": "5",
+              "text": {
+                "ja": "2017 PATHFINDER"
+              }
+            },
+            {
+              "value": "3",
+              "text": {
+                "default": "C",
+                "ja": "2014 WILLPOLIS"
+              }
+            },
+            {
+              "value": "4",
+              "text": {
+                "default": "D",
+                "ja": "2012 GOLD GLIDER"
+              }
+            }
+          ],
+          "choicesOrder": "desc",
+          "maxSelectedChoices": 10
+        },
+        {
+          "type": "text",
+          "name": "comment",
+          "title": "最後に皆に一言をどうぞ！"
+        }
+      ]
+    }
+  ]
+}

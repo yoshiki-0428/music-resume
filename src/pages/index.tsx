@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
-import ButtonLink from '@/components/links/ButtonLink';
+import ButtonLink from "@/components/links/ButtonLink";
 import UnderlineLink from '@/components/links/UnderlineLink';
 import SampleResume from '@/components/resume/SampleResume';
 import Seo from '@/components/Seo';
@@ -28,8 +28,15 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <h1 className='text-lg md:text-xl'>音楽の履歴書サービス</h1>
+            <h1 className='mt-4 text-lg md:text-xl'>音楽の履歴書サービス</h1>
+            <div className='my-10 w-96 text-xl text-left'>
+              <p><UnderlineLink href='https://music-resume.vercel.app'>music-resume</UnderlineLink> で</p>
+              <p>あなただけの好きなバンドの履歴書を</p>
+              <p>ポチポチ入力するだけで簡単に作成できます。</p>
+            </div>
+            <ButtonLink href='/resume/new' variant='outline'>自分の音楽履歴書を作成する</ButtonLink>
 
+            <div className='mt-4 text-base md:text-xl'>サンプルはこちら</div>
             <SampleResume />
 
             <Button
@@ -49,10 +56,6 @@ export default function HomePage() {
             >
               履歴書をダウンロードする
             </Button>
-
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
 
             {/*absolute bottom-0*/}
             <footer className='m-4 text-gray-700'>

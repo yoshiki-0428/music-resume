@@ -1,9 +1,11 @@
 import * as React from 'react';
 
+import UnderlineLink from "@/components/links/UnderlineLink";
+
 export default function SampleResume() {
   return (
     <div id='resume' className='flex justify-center' style={{ width: '400px' }}>
-      <div className='mt-10 w-80 md:w-96'>
+      <div className='mt-4 w-80 md:w-96'>
         {/* header */}
         <div className='flex justify-between'>
           <h1 className='text-lg md:text-xl'>BUMP 履歴書</h1>
@@ -97,7 +99,7 @@ export default function SampleResume() {
         {/* footer */}
         <div className='mb-2 flex justify-between'>
           <div></div>
-          <div className='mt-auto text-xs'>created by music-resume.com</div>
+          <div className='mt-auto text-xs'>created by <UnderlineLink href='https://music-resume.vercel.app'>music-resume.vercel.app</UnderlineLink></div>
         </div>
       </div>
     </div>
