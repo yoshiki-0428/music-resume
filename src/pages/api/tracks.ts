@@ -9,7 +9,7 @@ export default function tracks(req: NextApiRequest, res: NextApiResponse) {
     return record.artists[0].name === 'BUMP OF CHICKEN'
   })
 
-  const hash: { [key: string]: any } = {}
+  const hash: { [key: string]: { album: { album_type: string }, name: string, popularity: number } } = {}
   json.forEach(record => {
     if (hash[record.name]) {
       if (hash[record.name].album.album_type === 'single' && record.album.album_type === 'album') {
@@ -20,5 +20,7 @@ export default function tracks(req: NextApiRequest, res: NextApiResponse) {
     }
   })
 
-  res.status(200).json(Object.keys(hash).map(k => hash[k]));
+  res.status(200).json(
+    Object.keys(hash).map(k => hash[k]).sort((a, b) => b.popularity - a.popularity)
+  );
 }
