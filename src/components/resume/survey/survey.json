@@ -42,21 +42,13 @@
           "name": "songs",
           "title": "好きな曲を選んでください (10曲まで)",
           "isRequired": true,
-          "choices": [
-            {
-              "value": "1",
-              "text": "天体観測"
-            },
-            {
-              "value": "2",
-              "text": "Ray"
-            },
-            {
-              "value": "3",
-              "text": "新世界"
-            }
-          ],
           "choicesOrder": "asc",
+          "choicesByUrl": {
+            "url": "https://music-resume.vercel.app",
+            "path": "/api/tracks",
+            "valueName": "id",
+            "titleName": "name"
+          },
           "showOtherItem": true,
           "otherText": "その他",
           "maxSelectedChoices": 10

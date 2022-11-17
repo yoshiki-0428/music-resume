@@ -56,14 +56,6 @@ export default function HomePage() {
             >
               履歴書をダウンロードする
             </Button>
-
-            {/*absolute bottom-0*/}
-            <footer className='m-4 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://tech-blog.yoshikiohashi.dev'>
-                yoshiki-0428
-              </UnderlineLink>
-            </footer>
           </div>
         </section>
       </main>
