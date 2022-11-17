@@ -44,8 +44,8 @@
           "isRequired": true,
           "choicesOrder": "asc",
           "choicesByUrl": {
-            "url": "https://music-resume.vercel.app",
-            "path": "/api/tracks",
+            "url": "https://music-resume.vercel.app/api/tracks",
+            "path": "",
             "valueName": "id",
             "titleName": "name"
           },
