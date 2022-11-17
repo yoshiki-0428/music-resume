@@ -3,8 +3,6 @@ import {useCallback} from "react";
 import {Model, StylesManager} from 'survey-core';
 import {Survey} from "survey-react-ui";
 
-import 'survey-core/defaultV2.min.css';
-
 import json from './survey.json'
 
 StylesManager.applyTheme("defaultV2");
