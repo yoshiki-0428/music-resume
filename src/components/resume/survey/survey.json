@@ -24,11 +24,11 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": 1,
               "text": "男性"
             },
             {
-              "value": "0",
+              "value": 0,
               "text": "女性"
             },
             {
@@ -37,6 +37,23 @@
             }
           ]
         },
+        {
+          "type": "comment",
+          "name": "trigger",
+          "title": "好きになったきっかけを入力してください",
+          "maxLength": 200,
+          "placeholder": "中学生の時に天体観測を聞いた。"
+        },
+        {
+          "type": "text",
+          "name": "comment",
+          "title": "皆に一言をどうぞ！"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
         {
           "type": "tagbox",
           "name": "songs",
@@ -52,14 +69,11 @@
           "showOtherItem": true,
           "otherText": "その他",
           "maxSelectedChoices": 10
-        },
-        {
-          "type": "comment",
-          "name": "trigger",
-          "title": "好きになったきっかけを入力してください",
-          "maxLength": 200,
-          "placeholder": "中学生の時に天体観測を聞いた。"
-        },
+        }
+      ]
+    },
+    { "name": "page3",
+      "elements": [
         {
           "type": "tagbox",
           "name": "joining",
@@ -102,11 +116,6 @@
           ],
           "choicesOrder": "desc",
           "maxSelectedChoices": 10
-        },
-        {
-          "type": "text",
-          "name": "comment",
-          "title": "最後に皆に一言をどうぞ！"
         }
       ]
     }

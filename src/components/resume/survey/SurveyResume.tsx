@@ -1,3 +1,4 @@
+import axios from "axios";
 import {useRouter} from "next/router";
 import {useCallback} from "react";
 import {Model, StylesManager} from 'survey-core';
@@ -14,10 +15,11 @@ function SurveyResume() {
   const survey = new Model(surveyJson);
 
   const alertResults = useCallback((sender: { data: any }) => {
-    const results = JSON.stringify(sender.data);
-    alert(results)
-    router.push('/resume/1')
-  }, []);
+    axios.post('/api/resume', sender.data).then(response => {
+      console.log(response.data.id)
+      router.push(`/resume/${response.data.id}`)
+    })
+  }, [])
   survey.onComplete.add(alertResults);
   return <Survey model={survey} />;
 }
