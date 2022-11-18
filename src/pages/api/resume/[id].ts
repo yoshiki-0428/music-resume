@@ -11,7 +11,7 @@ export default async function resumeId(req: NextApiRequest, res: NextApiResponse
   if (req.method === 'GET') {
     try {
       await client.connect()
-      const data = await client.get(`${artistID}:${id}`)
+      const data = await client.get(`${artistID}:resume:${id}`)
       if (data) {
         res.status(200).json(JSON.parse(data));
       } else {
