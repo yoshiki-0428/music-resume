@@ -11,7 +11,6 @@ export default async function index(req: NextApiRequest, res: NextApiResponse) {
     // valid
     const data = {id: ulid(), createdAt: new Date(), ...req.body}
 
-    console.log(data)
     try {
       await client.connect()
       await client.set(`${artistID}:resume:${data.id}`, JSON.stringify(data))

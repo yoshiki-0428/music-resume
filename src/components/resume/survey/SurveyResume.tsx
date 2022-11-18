@@ -16,12 +16,12 @@ function SurveyResume() {
 
   const alertResults = useCallback((sender: { data: any }) => {
     axios.post('/api/resume', sender.data).then(response => {
-      console.log(response.data.id)
       router.push(`/resume/${response.data.id}`)
     })
   }, [])
-  survey.onComplete.add(alertResults);
-  return <Survey model={survey} />;
+  survey.onComplete.add(alertResults)
+
+  return <Survey model={survey} />
 }
 
 export default SurveyResume;

@@ -13,7 +13,7 @@ export default async function resumeId(req: NextApiRequest, res: NextApiResponse
       await client.connect()
       const data = await client.get(`${artistID}:resume:${id}`)
       if (data) {
-        res.status(200).json(JSON.parse(data));
+        res.status(200).json(JSON.parse(data))
       } else {
         res.status(404)
       }
@@ -25,3 +25,4 @@ export default async function resumeId(req: NextApiRequest, res: NextApiResponse
   }
   res.end()
 }
+
