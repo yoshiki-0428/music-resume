@@ -1,10 +1,9 @@
-import html2canvas from 'html2canvas';
 import * as React from 'react';
 
-import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from "@/components/links/ButtonLink";
 import UnderlineLink from '@/components/links/UnderlineLink';
+import DownloadButton from "@/components/resume/DownloadButton";
 import SampleResume from '@/components/resume/SampleResume';
 import Seo from '@/components/Seo';
 
@@ -38,24 +37,7 @@ export default function HomePage() {
 
             <div className='mt-4 text-base md:text-xl'>サンプルはこちら</div>
             <SampleResume />
-
-            <Button
-              onClick={() => {
-                const element = document.querySelector(
-                  '#resume'
-                ) as HTMLHtmlElement;
-
-                html2canvas(element).then(function (canvas) {
-                  const base64 = canvas.toDataURL('image/png');
-                  const a = document.createElement('a');
-                  a.href = base64;
-                  a.download = 'resume';
-                  a.click();
-                });
-              }}
-            >
-              履歴書をダウンロードする
-            </Button>
+            <DownloadButton selector='#resume' />
           </div>
         </section>
       </main>

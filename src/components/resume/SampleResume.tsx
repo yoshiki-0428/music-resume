@@ -76,10 +76,10 @@ export default function SampleResume() {
               </label>
               <div className='w-4/5 p-2 text-sm'>
                 <ul className='list-outside text-left'>
-                  <li>2022 Silver Jubilee 札幌</li>
-                  <li>2019 aurora ark メットライフドーム</li>
-                  <li>2014 WILLPOLIS 朱鷺メッセ</li>
-                  <li>2012 GOLD GLIDER TOUR 朱鷺メッセ</li>
+                  <li>2022 Silver Jubilee</li>
+                  <li>2019 aurora ark</li>
+                  <li>2014 WILLPOLIS</li>
+                  <li>2012 GOLD GLIDER TOUR</li>
                 </ul>
               </div>
             </fieldset>
