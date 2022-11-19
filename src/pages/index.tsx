@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -6,6 +7,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import DownloadButton from "@/components/resume/DownloadButton";
 import SampleResume from '@/components/resume/SampleResume';
 import Seo from '@/components/Seo';
+const Volume = dynamic(() => import('@/components/resume/Volume'), { ssr: false });
 
 /**
  * SVGR Support
@@ -28,6 +30,7 @@ export default function HomePage() {
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <h1 className='mt-4 text-3xl'>Music & Resume</h1>
+            <Volume />
             <div className='my-10 w-96 text-base md:text-xl text-left'>
               <p><UnderlineLink href='https://music-resume.vercel.app'>music-resume</UnderlineLink> で</p>
               <p>あなただけの好きなバンドの履歴書を</p>
