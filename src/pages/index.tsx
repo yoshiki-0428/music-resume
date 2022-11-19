@@ -27,8 +27,8 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <h1 className='mt-4 text-lg md:text-xl'>音楽の履歴書サービス</h1>
-            <div className='my-10 w-96 text-xl text-left'>
+            <h1 className='mt-4 text-3xl'>Music & Resume</h1>
+            <div className='my-10 w-96 text-base md:text-xl text-left'>
               <p><UnderlineLink href='https://music-resume.vercel.app'>music-resume</UnderlineLink> で</p>
               <p>あなただけの好きなバンドの履歴書を</p>
               <p>ポチポチ入力するだけで簡単に作成できます。</p>
