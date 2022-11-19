@@ -1,24 +1,17 @@
+import { format } from 'date-fns'
 import * as React from 'react';
 
 import UnderlineLink from "@/components/links/UnderlineLink";
 
+import {ResumeType} from "@/repository/types";
+
 type Props = {
-  values: {
-    artist: string
-    createdAt: string
-    name: string
-    username: string
-    gender: number
-    songs: string[]
-    trigger?: string
-    joining?: string[]
-    comment?: string
-  }
+  values: ResumeType
 }
 
 export default function Resume(props: Props) {
   const { artist = 'BUMP', createdAt, name, username, gender, songs, trigger, joining, comment } = props.values
-  let genderElement = <div className='w-4/5 text-xl text-red-500 font-bold my-auto'>♀</div>
+  let genderElement
   switch (gender) {
     case 1:
       genderElement = <div className='m-auto w-4/5 text-xl font-bold text-blue-500'>♂</div>
@@ -36,7 +29,7 @@ export default function Resume(props: Props) {
         {/* header */}
         <div className='flex justify-between'>
           <h1 className='text-lg md:text-xl'>{artist}履歴書</h1>
-          <div className='mt-auto text-sm'>作成日: {createdAt}</div>
+          <div className='mt-auto text-sm'>作成日: {format(new Date(createdAt), 'yyyy/MM/dd')}</div>
         </div>
         {/* content */}
         <div className='my-2 border border-black'>

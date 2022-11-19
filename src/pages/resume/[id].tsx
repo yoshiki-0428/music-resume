@@ -8,15 +8,18 @@ import DownloadButton from "@/components/resume/DownloadButton";
 import Resume from "@/components/resume/Resume";
 import Seo from "@/components/Seo";
 
+import {ResumeType} from "@/repository/types";
+
 export default function ResumeId() {
   const router = useRouter()
   const { id } = router.query
-  const [resume, setResume] = useState<any>(null);
+  const [resume, setResume] = useState<ResumeType | null>(null);
 
   useEffect(() => {
-    if (resume === null && id) {
+    if (id && resume === null) {
       axios.get(`/api/resume/${id}`).then(response => {
-        setResume(response.data)
+        const resume: ResumeType = response.data
+        setResume(resume)
       })
     }
   }, [id])

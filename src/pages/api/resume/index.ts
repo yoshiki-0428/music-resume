@@ -5,11 +5,12 @@ import {ulid} from "ulid";
 import {client} from "@/lib/redis";
 
 import {artistID} from "@/constant/env";
+import {ResumeType} from "@/repository/types";
 
 export default async function index(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     // valid
-    const data = {id: ulid(), createdAt: new Date(), ...req.body}
+    const data: ResumeType = {id: ulid(), createdAt: new Date(), ...req.body}
 
     try {
       await client.connect()
