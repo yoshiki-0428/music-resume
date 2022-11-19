@@ -34,31 +34,25 @@ export default function Resume(props: Props) {
         {/* content */}
         <div className='my-2 border border-black'>
           <div>
-            <div className='flex justify-between'>
-              <fieldset className='flex h-16 w-4/5 border border-b-2 border-black'>
+            <div className='flex justify-between border border-b-2 border-black'>
+              <fieldset className='flex h-16 w-4/5'>
                 <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                   名前
                 </label>
                 <div className='mt-auto mb-auto w-4/5 text-xl'>{name}</div>
               </fieldset>
-              <fieldset className='flex h-16 w-1/5 justify-between border border-b-2 border-black'>
+              <fieldset className='flex h-16 w-1/5 justify-between border border-l-2 border-0 border-black'>
                 {genderElement}
               </fieldset>
             </div>
-            <fieldset className='flex h-16 border border-b-2 border-black'>
-              <label
-                className='ml-1 mt-1 w-1/5 text-left text-base'
-                htmlFor='name'
-              >
+            <fieldset className='flex h-16 border border-b-2 border-t-0 border-black'>
+              <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                 ユーザ名
               </label>
               <div className='mt-auto mb-auto w-4/5 text-xl'>{username}</div>
             </fieldset>
-            <fieldset className='flex border border-b-2 border-black'>
-              <label
-                className='ml-1 mt-1 w-1/5 text-left text-base'
-                htmlFor='name'
-              >
+            <fieldset className='flex border border-b-2 border-t-0 border-black'>
+              <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                 好きな曲
               </label>
               <div className='w-4/5 p-2 text-sm'>
@@ -68,11 +62,8 @@ export default function Resume(props: Props) {
               </div>
             </fieldset>
             {trigger && (
-              <fieldset className='flex border border-b-2 border-black'>
-                <label
-                  className='ml-1 mt-1 w-1/5 text-left text-base'
-                  htmlFor='name'
-                >
+              <fieldset className='flex border border-b-2 border-t-0 border-black'>
+                <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                   きっかけ
                 </label>
                 <div className='w-4/5 p-2 text-sm'>
@@ -81,11 +72,8 @@ export default function Resume(props: Props) {
               </fieldset>
             )}
             {joining && (
-              <fieldset className='flex border border-b-2 border-black'>
-                <label
-                  className='ml-1 mt-1 w-1/5 text-left text-base'
-                  htmlFor='name'
-                >
+              <fieldset className='flex border border-b-2 border-t-0 border-black'>
+                <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                   参戦歴
                 </label>
                 <div className='w-4/5 p-2 text-sm'>
@@ -96,11 +84,8 @@ export default function Resume(props: Props) {
               </fieldset>
             )}
             {comment && (
-              <fieldset className='flex h-16 border border-b-2 border-black'>
-                <label
-                  className='ml-1 mt-1 w-1/5 text-left text-base'
-                  htmlFor='name'
-                >
+              <fieldset className='flex h-16 border border-t-0 border-black'>
+                <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                   皆に一言
                 </label>
                 <div className='mt-auto mb-auto w-4/5 text-xl'>
