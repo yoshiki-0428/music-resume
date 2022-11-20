@@ -24,15 +24,15 @@
           "isRequired": true,
           "choices": [
             {
-              "value": 1,
-              "text": "男性"
-            },
-            {
               "value": 0,
               "text": "女性"
             },
             {
-              "value": "2",
+              "value": 1,
+              "text": "男性"
+            },
+            {
+              "value": 2,
               "text": "？"
             }
           ]
@@ -66,8 +66,7 @@
             "valueName": "id",
             "titleName": "name"
           },
-          "showOtherItem": true,
-          "otherText": "その他",
+          "showOtherItem": false,
           "maxSelectedChoices": 10
         }
       ]

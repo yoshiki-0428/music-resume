@@ -13,6 +13,9 @@ export default function Resume(props: Props) {
   const { artist = 'BUMP', createdAt, name, username, gender, songs, trigger, joining, comment } = props.values
   let genderElement
   switch (gender) {
+    case 0:
+      genderElement = <div className='m-auto w-4/5 text-xl font-bold text-red-500'>♀</div>
+      break
     case 1:
       genderElement = <div className='m-auto w-4/5 text-xl font-bold text-blue-500'>♂</div>
       break
