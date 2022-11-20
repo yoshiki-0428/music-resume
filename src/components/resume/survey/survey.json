@@ -77,7 +77,7 @@
           "type": "tagbox",
           "name": "joining",
           "title": "ライブの参加歴を選んでください。(10個まで)",
-          "choicesOrder": "asc",
+          "choicesOrder": "desc",
           "choicesByUrl": {
             "url": "https://music-resume.vercel.app/api/joining",
             "path": "",
