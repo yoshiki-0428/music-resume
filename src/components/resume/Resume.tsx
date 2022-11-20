@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function Resume(props: Props) {
-  const { artist = 'BUMP', createdAt, name, username, gender, songs, trigger, joining, comment } = props.values
+  const { artist = 'BUMP', createdAt, name, username, gender, tracks, trigger, joining, comment } = props.values
   let genderElement
   switch (gender) {
     case 0:
@@ -60,7 +60,7 @@ export default function Resume(props: Props) {
               </label>
               <div className='w-4/5 p-2 text-sm'>
                 <ul className='flex list-none flex-wrap	space-x-2'>
-                  {songs.map((s, i) => <li key={i}>{s}</li>)}
+                  {tracks.map((track, i) => <li key={i}>{track.name}</li>)}
                 </ul>
               </div>
             </fieldset>

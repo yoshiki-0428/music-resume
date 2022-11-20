@@ -6,6 +6,7 @@ export type ResumeType = {
   username: string
   gender: number
   songs: string[]
+  tracks: SpotifyApi.TrackObjectSimplified[]
   trigger?: string
   joining?: string[]
   comment?: string

@@ -3,7 +3,7 @@ import {client} from "@/lib/redis";
 
 import {getTracksBySpotify} from "@/repository/spotify";
 
-export const getTracks = async (artistID: string) => {
+export const getTracks = async (artistID: string): Promise<SpotifyApi.TrackObjectSimplified[] | undefined> => {
   await client.connect()
   try {
     const tracks = await getTracksByRedis(artistID)
@@ -16,7 +16,7 @@ export const getTracks = async (artistID: string) => {
     await client.lPush(`${artistID}:tracks`, values.map(v => JSON.stringify(v)))
     await client.expire(`${artistID}:tracks`, 60 * 24 * 30)
     await client.ttl(`${artistID}:tracks`)
-    return await getTracksByRedis(artistID)
+    return await getTracksByRedis(artistID) as SpotifyApi.TrackObjectSimplified[]
   } catch (e) {
     logger(e)
   } finally {
