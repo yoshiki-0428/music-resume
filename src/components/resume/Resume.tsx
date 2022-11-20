@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function Resume(props: Props) {
-  const { artist = 'BUMP', createdAt, name, username, gender, tracks, trigger, joining, comment } = props.values
+  const { artist = 'BUMP', createdAt, name, username, gender, tracks, trigger, joiningRecord, comment } = props.values
   let genderElement
   switch (gender) {
     case 0:
@@ -74,14 +74,14 @@ export default function Resume(props: Props) {
                 </div>
               </fieldset>
             )}
-            {joining && (
+            {joiningRecord && (
               <fieldset className='flex border border-b-2 border-t-0 border-black'>
                 <label className='ml-1 mt-1 w-1/5 text-left text-base'>
                   参戦歴
                 </label>
                 <div className='w-4/5 p-2 text-sm'>
                   <ul className='list-outside text-left'>
-                    {joining.map((j, i) => <li key={i}>{j}</li>)}
+                    {joiningRecord.map((j, i) => <li key={i}>{j.text}</li>)}
                   </ul>
                 </div>
               </fieldset>
