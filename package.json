@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "redis": "^4.5.0",
+    "spotify-web-api-node": "^5.0.2",
     "survey-react-ui": "^1.9.58",
     "tailwind-merge": "^1.8.0",
     "ulid": "^2.3.0"
@@ -39,6 +40,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.25",
+    "@types/spotify-web-api-node": "^5.0.7",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "autoprefixer": "^10.4.13",
