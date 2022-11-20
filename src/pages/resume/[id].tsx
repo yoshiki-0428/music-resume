@@ -2,6 +2,7 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import * as React from "react";
 import {useEffect, useState} from "react";
+import {TwitterIcon, TwitterShareButton} from "react-share";
 
 import Layout from "@/components/layout/Layout";
 import DownloadButton from "@/components/resume/DownloadButton";
@@ -36,6 +37,19 @@ export default function ResumeId() {
               {resume && <Resume values={resume} />}
             </div>
             <DownloadButton selector='#resume' />
+
+            <div className='flex mt-10 mx-auto'>
+              <div>{resume && (
+                <TwitterShareButton url={location.href}
+                                    title={`BUMP履歴書を作成しました！${resume.comment}`}
+                                    hashtags={['BUMP履歴書', 'BUMP', 'BUMPerと繋がりたい']}>
+                  <div className='flex items-center justify-between space-x-2'>
+                    <TwitterIcon size={32} round={true} /><div>履歴書をシェアする！</div>
+                  </div>
+                </TwitterShareButton>)
+              }
+              </div>
+            </div>
           </div>
         </section>
       </main>
