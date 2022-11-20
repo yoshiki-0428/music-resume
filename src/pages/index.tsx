@@ -7,7 +7,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import DownloadButton from "@/components/resume/DownloadButton";
 import SampleResume from '@/components/resume/SampleResume';
 import Seo from '@/components/Seo';
-const Volume = dynamic(() => import('@/components/resume/Volume'), { ssr: false });
+const Volume = dynamic(() => import('@/components/resume/Volume'), {ssr: false});
 
 /**
  * SVGR Support

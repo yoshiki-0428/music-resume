@@ -7,6 +7,7 @@ import Layout from "@/components/layout/Layout";
 import DownloadButton from "@/components/resume/DownloadButton";
 import Resume from "@/components/resume/Resume";
 import Seo from "@/components/Seo";
+import Skeleton from "@/components/Skeleton";
 
 import {ResumeType} from "@/repository/types";
 
@@ -29,8 +30,11 @@ export default function ResumeId() {
       <Seo templateTitle='Survey' />
       <main>
         <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center  text-center'>
-            {resume && <Resume values={resume} />}
+          <div className='layout flex min-h-screen flex-col items-center text-center'>
+            <div className='m-2 md:m-4'>
+              {resume === null && <Skeleton style={{ width: '400px' }} className='h-96 rounded' />}
+              {resume && <Resume values={resume} />}
+            </div>
             <DownloadButton selector='#resume' />
           </div>
         </section>

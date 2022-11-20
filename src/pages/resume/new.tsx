@@ -3,7 +3,11 @@ import * as React from "react";
 
 import Layout from "@/components/layout/Layout";
 import Seo from "@/components/Seo";
-const SurveyResume = dynamic(() => import('@/components/resume/survey/SurveyResume'), { ssr: false });
+import Skeleton from "@/components/Skeleton";
+const SurveyResume = dynamic(() => import('@/components/resume/survey/SurveyResume'),
+  { ssr: false,
+    loading: () => <Skeleton className='h-screen w-screen' />
+  });
 
 export default function ResumeNew() {
   return (
