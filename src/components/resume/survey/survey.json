@@ -79,37 +79,87 @@
           "title": "ライブの参加歴を選んでください。(10個まで)",
           "choices": [
             {
-              "value": "1",
+              "value": "BUMP OF CHICKEN TOUR 2023",
               "text": {
-                "default": "A",
+                "ja": "BUMP OF CHICKEN TOUR 2023"
+              }
+            },
+            {
+              "value": "2022 Silver Jubilee",
+              "text": {
                 "ja": "2022 Silver Jubilee"
               }
             },
             {
-              "value": "2",
+              "value": "2021 Studio Live Silver Jubilee",
               "text": {
-                "default": "B",
-                "ja": "2019 aurora ark"
+                "ja": "2021 Studio Live Silver Jubilee"
               }
             },
             {
-              "value": "5",
+              "value": "TOUR 2019 aurora ark",
               "text": {
-                "ja": "2017 PATHFINDER"
+                "ja": "TOUR 2019 aurora ark"
               }
             },
             {
-              "value": "3",
+              "value": "TOUR 2017-2018 PATHFINDER",
               "text": {
-                "default": "C",
+                "ja": "TOUR 2017-2018 PATHFINDER"
+              }
+            },
+            {
+              "value": "STADIUM TOUR 2016 \"BFLY\"",
+              "text": {
+                "ja": "STADIUM TOUR 2016 \"BFLY\""
+              }
+            },
+            {
+              "value": "結成20周年記念Special Live「20」",
+              "text": {
+                "ja": "結成20周年記念Special Live「20」"
+              }
+            },
+            {
+              "value": "2015 Special Live",
+              "text": {
+                "ja": "2015 Special Live"
+              }
+            },
+            {
+              "value": "2014 STUDIO COAST",
+              "text": {
+                "ja": "2014 STUDIO COAST"
+              }
+            },
+            {
+              "value": "2014 Live in Taiwan",
+              "text": {
+                "ja": "2014 Live in Taiwan"
+              }
+            },
+            {
+              "value": "2014 WILLPOLIS",
+              "text": {
                 "ja": "2014 WILLPOLIS"
               }
             },
             {
-              "value": "4",
+              "value": "2013 WILLPOLIS",
               "text": {
-                "default": "D",
+                "ja": "2013 WILLPOLIS"
+              }
+            },
+            {
+              "value": "2012 GOLD GLIDER",
+              "text": {
                 "ja": "2012 GOLD GLIDER"
+              }
+            },
+            {
+              "value": "2011 GOLD GLIDER",
+              "text": {
+                "ja": "2011 GOLD GLIDER"
               }
             }
           ],
