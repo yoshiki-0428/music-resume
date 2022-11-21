@@ -15,7 +15,10 @@
           "type": "text",
           "name": "username",
           "title": "ユーザ名を入力してください（SNSのIDなど）",
-          "isRequired": true
+          "isRequired": true,
+          "placeholder": {
+            "ja": "@twitter_name"
+          }
         },
         {
           "type": "radiogroup",
@@ -47,7 +50,10 @@
         {
           "type": "text",
           "name": "comment",
-          "title": "皆に一言をどうぞ！"
+          "title": "皆に一言をどうぞ！",
+          "placeholder": {
+            "ja": "よろしくどうぞ！"
+          }
         }
       ]
     },
@@ -62,16 +68,15 @@
           "choicesOrder": "asc",
           "choicesByUrl": {
             "url": "https://music-resume.vercel.app/api/tracks",
-            "path": "",
             "valueName": "id",
             "titleName": "name"
           },
-          "showOtherItem": false,
           "maxSelectedChoices": 10
         }
       ]
     },
-    { "name": "page3",
+    {
+      "name": "page3",
       "elements": [
         {
           "type": "tagbox",
@@ -80,12 +85,27 @@
           "choicesOrder": "desc",
           "choicesByUrl": {
             "url": "https://music-resume.vercel.app/api/joining",
-            "path": "",
             "valueName": "id",
             "titleName": "text"
           },
-          "showOtherItem": false,
           "maxSelectedChoices": 10
+        }
+      ]
+    },
+    {
+      "name": "page4",
+      "elements": [
+        {
+          "type": "text",
+          "name": "email",
+          "title": {
+            "ja": "Emailを入力してください。"
+          },
+          "description": {
+            "ja": "編集や削除を行うためのリンクをお送りします。"
+          },
+          "isRequired": true,
+          "inputType": "email"
         }
       ]
     }
