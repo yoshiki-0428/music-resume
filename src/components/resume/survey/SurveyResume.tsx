@@ -6,7 +6,7 @@ import {Survey} from "survey-react-ui";
 
 import json from './survey.json'
 
-StylesManager.applyTheme("defaultV2");
+StylesManager.applyTheme("defaultV2")
 
 const surveyJson = json
 

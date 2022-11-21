@@ -1,6 +1,7 @@
 /* //!STARTERCONF Remove this file after copying your desired color, this is a large file you should remove it. */
 :root {
     --base-unit: 8px;
+    --primary: #2463EB;
 }
 .sv-tagbox__item {
     height: calc(3 * 12px)
