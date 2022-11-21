@@ -11,6 +11,7 @@ export type ResumeType = {
   joining?: number[]
   joiningRecord?: JoinType[]
   comment?: string
+  email?: string | null
 }
 
 export type JoinType = { id: number; text: string; url: string }
