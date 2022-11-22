@@ -1,7 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import {EmailData} from "@sendgrid/helpers/classes/email-address";
-import {MailDataRequired} from "@sendgrid/helpers/classes/mail";
-import sgMail from '@sendgrid/mail';
+import AWS from 'aws-sdk'
 import { NextApiRequest, NextApiResponse } from 'next';
 import {ulid} from "ulid";
 
@@ -11,6 +9,36 @@ import {artistID} from "@/constant/env";
 import {ResumeType} from "@/repository/types";
 
 export default async function index(req: NextApiRequest, res: NextApiResponse) {
+  const ses = new AWS.SES()
+  const params = {
+    Destination: {
+      ToAddresses: [
+        'success@simulator.amazonses.com',
+      ],
+    },
+    Message: {
+      Body: {
+        Text: {
+          Data: 'こんにちは、テストメールです',
+          Charset: 'utf-8'
+        },
+      },
+      Subject: {
+        Data: 'こんにちは、こんにちは！',
+        Charset: 'utf-8',
+      },
+    },
+    // From
+    Source: process.env.FROM_EMAIL || '',
+  };
+
+  ses.sendEmail(params, (err, res) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log(res);
+  });
+
   if (req.method === 'POST') {
     // valid
     const data: ResumeType = {id: ulid(), createdAt: new Date(), ...req.body}
@@ -18,15 +46,6 @@ export default async function index(req: NextApiRequest, res: NextApiResponse) {
     data.email = null
 
     // TODO: email repo
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
-    const msg: MailDataRequired = {
-      to: email as string,
-      from: process.env.FROM_EMAIL as EmailData,
-      subject: 'アプリからの問い合わせ',
-      text: `アプリからの問い合わせ`,
-      html: `<div>アプリからの問い合わせ</div>`
-    }
-    await sgMail.send(msg);
     // TODO: create `${artistID}:resume:${data.id}:updateKey, AAABBBCCC`
     // TODO: create `${email}, { userId: ulid(), email: email, resume: [${data.id}] }`
 
